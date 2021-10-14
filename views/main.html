@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	      <link rel="stylesheet" href="css/index.css" type="text/css">
+        <title>Shinra Corporation</title>
+    </head>
+
+    <body scroll="no" style="overflow: hidden">
+        <div class="lm-animated-bg" style="background-image: url(img/ffbg.jpg);" background-position: calc(50% + -3.15519px) calc(50% + 10.1792px);></div>
+        <div class="main-class">
+            <div class="container">
+                <div class="menu"></div>
+                <div class="menu-bg"></div>
+                <div class="menu-content"></div>
+
+
+                      <!-- Nav Menu -->
+                <div class="top-menu"><br><br><br><h3><i><u>VIEW INVENTORY</u></i></h3>
+                      <h4 >Sector I</h4>
+                      <button id="button1" onclick="window.location.href='#home'; loadInventory(1);" class="nav-anim">WAREHOUSE 1</button>
+                      <button id="button2" onclick="window.location.href='#home'; loadInventory(2);" class="nav-anim">WAREHOUSE 2</button>
+                </div>
+                <div class="mid-menu"><h4>Sector II</h4>
+                      <button id="button3" onclick="window.location.href='#home'; loadInventory(3);" class="nav-anim">WAREHOUSE 1</button>
+                      <button id="button4" onclick="window.location.href='#home';  loadInventory(4);" class="nav-anim">WAREHOUSE 2</button><br><br><br>
+
+                      <h3><i><u>INVENTORY MANAGEMENT</u></i></h3>
+                      <button  onclick="window.location.href='#contact'; setFunction('Update');" class="nav-anim">UPDATE</button>
+                      <button  onclick="window.location.href='#contact'; setFunction('Add');" class="nav-anim">ADD</button>
+                      <button  onclick="window.location.href='#contact'; setFunction('Delete');" class="nav-anim">DELETE</button>
+                      <br><br><button onclick="window.location.href='http://localhost:8084/logout';">LOGOUT</button>
+                </div>
+                <div class="bot-menu"></div>
+                <div class="content"></div>
+
+                      <!-- main content area -->
+                <div class="content-header" id="form-header"></div>
+                <div class="main-content" id="data">
+                      <section class="fade-in-text">
+                            <h1>Project 1 — Warehouse Inventory</h1><br>
+                            <p>
+                            Project 1 — Warehouse Inventory<br>
+                            You will create a central repository for a large company that enables them to control and view the inventory of each 
+                            of its smaller companies’ warehouses. This large company can have many smaller companies, and each smaller company may 
+                            have any number of warehouses. Each of these warehouses must have a maximum capacity and cannot surpass that limit.
+                            </p>
+                            <p>
+                            Your application must provide means to the parent company for the reading, adding, updating, and removal of the items 
+                            stored in each warehouse and have it displayed on the frontend.
+                            This project will be due at the end of the 4th week, October 15th, 2021. Requirements:</p>
+                            <ul style="text-align: left">
+                                <li>User friendly frontend with a focus on UI/UX during the presentation</li>
+                                <li>Frontend using HTML/CSS/JavaScript</li>
+                                <li>Backend server using Node and Express.js</li>
+                                <li>Database using MongoDB</li>
+                                <li>All the CRUD operations specified above are implemented</li>
+                            </ul>
+                      </section>
+          
+                </div>
+            </div>        
+                
+                    <!-- Hidden form used to store values -->
+            <div id="form-temp">
+                  <input type="hidden" id="form-sector"  value="">
+                  <input type="hidden" id="form-warehouse"  value="">
+                  <input type="hidden" id="form-material"  value="">
+                  <input type="hidden" id="form-quantity"  value="0">
+                  <input type="hidden" id="form-function" value="">
+                  <input type="hidden" id="form-id" value="">
+                  <input type="hidden" id="form-count" value="">
+                  <input type="hidden" id="set-max" value="99">
+            </div>
+        </div>
+
+            <!-- xhr requests -->
+        <script src="js/manageInventory.js"></script>
+        <script src="js/viewInventory.js"></script>
+    </body>
+</html>

@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 
 const updateInventory = async (id, quantity) => {
     const response = await Inventory.updateOne({_id: id}, {$set: {Quantity: quantity}})
-    console.log(response);
 }
 
 
